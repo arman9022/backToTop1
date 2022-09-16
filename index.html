@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arman</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+      .to-top{
+        position: fixed;
+        bottom: 0px;
+        right: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .4s;
+      }
+      .to-top.active{
+        bottom: 20px;
+        pointer-events: auto;
+        opacity: 1;
+      }
+      .upIcon:hover{
+        color: green !important;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <section class="bg-info" style="height: 500vh;"></section>
+    
+    <a href="#" class="to-top" style="text-decoration: none;"><i class="bi bi-arrow-up-circle-fill fw-bold text-danger fs-1 upIcon"></i></a>
+    
+    <script>
+      const toTop =document.querySelector('.to-top');
+      window.addEventListener('scroll',()=>{
+        if(window.pageYOffset>200){
+          toTop.classList.add('active');
+        }else{
+          toTop.classList.remove('active');
+        }
+      }); 
+    </script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
